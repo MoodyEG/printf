@@ -27,6 +27,7 @@ int f_string(va_list valist)
  */
 int f_percent(va_list valist)
 {
+	(void)valist;
 	return (_putchar('%'));
 }
 /**
