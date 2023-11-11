@@ -12,7 +12,7 @@ int f_char(va_list valist)
 	return (_putchar(a));
 }
 /**
- * f_char - prints char
+ * f_string - print string
  * @valist: our valist
  * Return: the number of characters printed
  */
@@ -21,8 +21,8 @@ int f_string(va_list valist)
 	return (_puts(va_arg(valist, char *)));
 }
 /**
- * print_all - prints all, followed by a new line.
- * @format: types of arguments passed to the function
+ * f_percent - prints percent
+ *
  * Return: the number of characters printed
  */
 int f_percent(void)
