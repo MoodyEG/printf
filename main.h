@@ -21,6 +21,6 @@ struct iden
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _puts(char *str);
-int f_percent(void);
+int f_percent(va_list valist);
 
 #endif /* MAIN_H */

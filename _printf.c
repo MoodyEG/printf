@@ -25,7 +25,7 @@ int f_string(va_list valist)
  *
  * Return: the number of characters printed
  */
-int f_percent(void)
+int f_percent(va_list valist)
 {
 	return (_putchar('%'));
 }
