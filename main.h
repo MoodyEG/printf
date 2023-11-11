@@ -23,4 +23,4 @@ int _printf(const char *format, ...);
 int _puts(char *str);
 int f_percent();
 
-#endif /* MAIN_H */
+#endif /* MAIN_H */

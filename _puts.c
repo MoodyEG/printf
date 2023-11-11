@@ -15,5 +15,5 @@ int _puts(char *str)
 		a++;
 	}
 
-	return (a);
+	return (a);
 }

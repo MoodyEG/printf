@@ -76,11 +76,3 @@ int _printf(const char *format, ...)
 	_putchar('\n');
 	return (len);
 }
-int main(void)
-{
-	char b = 'm', d = 'n';
-	char *c = "Hello", *a = "world";
-
-	_printf("%c %c %s %s", d, b, c, a);
-	return (0);
-}
