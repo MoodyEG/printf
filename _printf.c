@@ -3,18 +3,17 @@
 /**
  * f_char - prints char
  * @valist: our valist
- * @a: our seperator
  * Return: the number of characters printed
  */
 int f_char(va_list valist)
 {
 	char a = va_arg(valist, int);
+
 	return (_putchar(a));
 }
 /**
  * f_char - prints char
  * @valist: our valist
- * @a: our seperator
  * Return: the number of characters printed
  */
 int f_string(va_list valist)
@@ -26,7 +25,7 @@ int f_string(va_list valist)
  * @format: types of arguments passed to the function
  * Return: the number of characters printed
  */
-int f_percent()
+int f_percent(void)
 {
 	return (_putchar('%'));
 }
