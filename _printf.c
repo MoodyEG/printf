@@ -50,7 +50,7 @@ int f_int(va_list valist)
 		_putchar('-');
 		lenint++;
 	}
-	else 
+	else
 		a = i;
 	b = a;
 	while (b > 9)
@@ -62,7 +62,7 @@ int f_int(va_list valist)
 	{
 		_putchar(((a / c) % 10) + '0');
 		c /= c;
-		lenint++;	
+		lenint++;
 	}
 	return (lenint);
 }
