@@ -7,7 +7,7 @@
  */
 int f_char(va_list valist)
 {
-	char a = va_arg(valist, int);
+	char a = (char) va_arg(valist, int);
 
 	return (_putchar(a));
 }
@@ -18,7 +18,11 @@ int f_char(va_list valist)
  */
 int f_string(va_list valist)
 {
-	return (_puts(va_arg(valist, char *)));
+	char *a = va_arg(valist, char *);
+
+	if (!a)
+		a = "(null)";
+	return (_puts(a));
 }
 /**
  * f_percent - prints percent
@@ -29,6 +33,38 @@ int f_percent(va_list valist)
 {
 	(void)valist;
 	return (_putchar('%'));
+}
+/**
+ * f_int - prints int
+ * @valist: our valist
+ * Return: the number of characters printed
+ */
+int f_int(va_list valist)
+{
+	int lenint = 0, i = va_arg(valist, int);
+	unsigned int a, b, c = 1;
+
+	if (i < 0)
+	{
+		a = -i;
+		_putchar('-');
+		lenint++;
+	}
+	else 
+		a = i;
+	b = a;
+	while (b > 9)
+	{
+		b /= 10;
+		c *= 10;
+	}
+	while (c >= 1)
+	{
+		_putchar(((a / c) % 10) + '0');
+		c /= c;
+		lenint++;	
+	}
+	return (lenint);
 }
 /**
  * _printf - prints what you want, followed by a new line.
@@ -44,6 +80,8 @@ int _printf(const char *format, ...)
 		{"c", f_char},
 		{"s", f_string},
 		{"%", f_percent},
+		{"d", f_int},
+		{"i", f_int},
 		{NULL, NULL},
 	};
 
