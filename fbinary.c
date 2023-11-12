@@ -10,12 +10,7 @@ int f_binary(va_list valist)
 	int lenint = 0, i = va_arg(valist, int);
 	unsigned int a, b, c = 1;
 
-	if (i == 0)
-	{
-		_putchar('0');
-		lenint++;
-	}
-	else if (i < 0)
+	if (i < 0)
 	{
 		a = -i;
 		_putchar('-');
