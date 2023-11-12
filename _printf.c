@@ -61,7 +61,7 @@ int f_int(va_list valist)
 	while (c >= 1)
 	{
 		_putchar(((a / c) % 10) + '0');
-		c /= c;
+		c /= 10;
 		lenint++;
 	}
 	return (lenint);
@@ -107,10 +107,16 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
+			if (!iden[j].iden)
+			{
+				len += _putchar('%');
+				len += _putchar(format[i]);
+				i++;
+				continue;
+			}
 		}
 		i++;
 	}
 	va_end(valist);
-	_putchar('\n');
 	return (len);
 }
