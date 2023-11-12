@@ -18,14 +18,15 @@ struct iden
 	int (*f)(va_list);
 };
 
-int get_f(char fword, va_list valist);
-int _printf(const char *format, ...);
+int _putchar(char c);
+int _puts(char *str);
 int f_char(va_list valist);
 int f_string(va_list valist);
 int f_percent(va_list valist);
 int f_anyway(char str);
 int f_int(va_list valist);
-int _putchar(char c);
-int _puts(char *str);
+int f_binary(va_list valist);
+int get_f(char fword, va_list valist);
+int _printf(const char *format, ...);
 
 #endif /* MAIN_H */

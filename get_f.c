@@ -12,7 +12,8 @@ int get_f(char fword, va_list valist)
 	iden_t iden[] = {
 		{"c", f_char}, {"s", f_string},
 		{"%", f_percent}, {"d", f_int},
-		{"i", f_int}, {NULL, NULL},
+		{"i", f_int}, {"b", f_binary},
+		{NULL, NULL},
 	};
 
 	while (iden[j].iden)
